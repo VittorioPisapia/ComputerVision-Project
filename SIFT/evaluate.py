@@ -11,7 +11,7 @@ def evaluate_model_with_sift():
     with open('D:\CV\Models_and_scalers\scaler_SIFT.pkl', 'rb') as f:
         scaler = pickle.load(f)
 
-    _, X_test, _, y_test = preprocess_data_with_sift('D:/CV/dataset/0', 'D:/CV/dataset/1')
+    X_test, _, y_test, _ = preprocess_data_with_sift('C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\dataset\\0', 'C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\dataset\\1')
 
     X_test = scaler.transform(X_test)
 

@@ -7,17 +7,17 @@ from data_preprocessing import preprocess_data_with_sift_hog
 from numpy.linalg import norm # type: ignore
 
 print("Loading the model...")
-with open('D:\CV\Models_and_scalers\sift_hog_svm_model.pkl', 'rb') as f:
+with open('C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\Models_and_scalers\sift_hog_svm_model.pkl', 'rb') as f:
     svm = pickle.load(f)
 
-with open('D:\CV\Models_and_scalers\scaler_SIFT_HOG.pkl ', 'rb') as f:
+with open('C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\Models_and_scalers\scaler_SIFT_HOG.pkl ', 'rb') as f:
     scaler = pickle.load(f)
 
 classifier = SklearnClassifier(model=svm)
 
-_, X_test, _, y_test = preprocess_data_with_sift_hog('D:/CV/dataset/0', 'D:/CV/dataset/1')
+_, X_test, _, y_test = preprocess_data_with_sift_hog('C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\dataset/0', 'C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\dataset/1')
 
-batch_size = 10
+batch_size = 100
 X_batch = X_test[:batch_size]
 y_batch = y_test[:batch_size]
 

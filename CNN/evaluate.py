@@ -5,7 +5,7 @@ from data_processing import preprocess_data_cnn
 import json
 
 def evaluate_model():
-    model = tf.keras.models.load_model('D:\CV\Models_and_scalers\deepfake_cnn_model_NODATA.keras')
+    model = tf.keras.models.load_model('C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\Models_and_scalers\deepfake_cnn_model_NODATA.keras')
 
     X_train, X_test, y_train, y_test = preprocess_data_cnn('D:\CV\\altro_dataset\Testing_500\\0', 'D:\CV\\altro_dataset\Testing_500\\1')
 

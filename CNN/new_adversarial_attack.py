@@ -8,8 +8,8 @@ from model import create_cnn
 tf.compat.v1.disable_eager_execution()
 
 input_shape = (224, 224, 3)
-real_dir = 'D:/CV/altro_dataset/Training_1500/0'
-fake_dir = 'D:/CV/altro_dataset/Training_1500/1'
+real_dir = 'C:\Users\Tommaso\Documents\GitHub\ComputerVision-Project\\new_dataset\Training_1500\\0'
+fake_dir = 'C:\Users\Tommaso\Documents\GitHub\ComputerVision-Project\\new_dataset\Training_1500\\1'
 
 X_train, X_test, y_train, y_test = preprocess_data_cnn(real_dir, fake_dir)
 
