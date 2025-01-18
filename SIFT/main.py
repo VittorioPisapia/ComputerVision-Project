@@ -5,7 +5,7 @@ import time
 def main():
     start_time = time.time()
 
-    train.train_model_with_sift()
+    #train.train_model_with_sift()
     end_time = time.time()
 
     

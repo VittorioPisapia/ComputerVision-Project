@@ -5,7 +5,7 @@ import time
 def main():
     start_time = time.time()
 
-    #train.train_model_with_sift_hog()
+    train.train_model_with_sift_hog()
     end_time = time.time()
 
     

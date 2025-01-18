@@ -1,11 +1,16 @@
 import train
 import evaluate
+import time
 
 def main():
-    # Addestramento del modello
-    #train.train_model()
+    start_time = time.time()
+
+    train.train_model()
+    end_time = time.time()
+
     
-    # Valutazione del modello
+    training_time = end_time - start_time
+    print(f"Training time: {training_time:.2f} seconds")
     evaluate.evaluate_model()
 
 if __name__ == "__main__":

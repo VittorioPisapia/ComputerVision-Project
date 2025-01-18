@@ -7,19 +7,20 @@ import json
 def evaluate_model():
     model = tf.keras.models.load_model('C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\Models_and_scalers\deepfake_cnn_model_NODATA.keras')
 
-    X_train, X_test, y_train, y_test = preprocess_data_cnn('D:\CV\\altro_dataset\Testing_500\\0', 'D:\CV\\altro_dataset\Testing_500\\1')
+    X_test, _, y_test, _ = preprocess_data_cnn('C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\dataset\\0', 'C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\dataset\\1')
 
     test_loss, test_accuracy = model.evaluate(X_test, y_test)
     print(f"Test Accuracy: {test_accuracy * 100:.2f}%")
 
     y_pred = (model.predict(X_test) > 0.5).astype("int32")
 
-    with open('D:\CV\Models_and_scalers\\training_history_NODATA.json', 'r') as f:
+    with open('C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\Models_and_scalers\\training_history_NODATA.json', 'r') as f:
         loaded_history = json.load(f)
     
     print(classification_report(y_test, y_pred, target_names=["Real", "Fake"]))
     
     conf_matrix = confusion_matrix(y_test, y_pred)
+    print(conf_matrix)
     plt.imshow(conf_matrix, cmap='Blues')
     plt.title('Confusion Matrix')
     plt.colorbar()

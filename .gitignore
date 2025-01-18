@@ -21,3 +21,4 @@ Models_and_scalers/lbp_hog_svm_model.pkl
 Models_and_scalers/hog_svm_model.pkl
 Models_and_scalers/deepfake_cnn_model_NODATA.keras
 Models_and_scalers/deepfake_cnn_model.keras
+*.keras

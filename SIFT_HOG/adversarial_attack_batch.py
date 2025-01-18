@@ -24,9 +24,9 @@ y_batch = y_test[:batch_size]
 X_batch_scaled = scaler.transform(X_batch)
 
 # Choose Attack Method
-attack = FastGradientMethod(estimator=classifier, eps=0.03)
+#attack = FastGradientMethod(estimator=classifier, eps=0.08)
 #attack = ProjectedGradientDescent(estimator=classifier, eps=0.02, max_iter=10)
-#attack = CarliniL2Method(classifier=classifier, confidence=0.1, max_iter=20)
+attack = CarliniL2Method(classifier=classifier, confidence=0.05, max_iter=20)
 
 print(f"Generating adversarial features for a batch of {batch_size} samples...")
 adversarial_features_scaled = attack.generate(x=X_batch_scaled)
@@ -39,9 +39,13 @@ successful_attacks = np.sum(original_predictions != adversarial_predictions)
 l2_differences = [norm(original - adversarial) 
                   for original, adversarial in zip(X_batch_scaled, adversarial_features_scaled)]
 
+original_norms = [norm(original) for original in X_batch_scaled]
+mean_original_norm = np.mean(original_norms)
+
 mean_l2_difference = np.mean(l2_differences)
 
 print(f"Original Predictions: {original_predictions}")
 print(f"Adversarial Predictions: {adversarial_predictions}")
 print(f"Number of successful attacks: {successful_attacks} out of {batch_size}")
 print(f"Mean L2 norm of differences: {mean_l2_difference:.4f}")
+print(f"Mean L2 norm of original features: {mean_original_norm:.4f}")

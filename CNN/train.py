@@ -9,7 +9,7 @@ import json
 def train_model():
     print('Starting training')
 
-    X_train, X_test, y_train, y_test = preprocess_data_cnn('D:\CV\\altro_dataset\Training_1500\\0', 'D:\CV\\altro_dataset\Training_1500\\1')
+    X_train, X_test, y_train, y_test = preprocess_data_cnn('C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\dataset10k\\0', 'C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\dataset10k\\1')
 
     model = create_cnn(input_shape=(224, 224, 3))
     
@@ -18,14 +18,14 @@ def train_model():
     history = model.fit(
         X_train, y_train,  
         validation_data=(X_test, y_test),              
-        epochs=20,
+        epochs=10,
         verbose=1
     )
 
     print('Training finished')
     
-    model.save('D:\CV\Models_and_scalers\deepfake_cnn_model_NODATA.keras')
-    with open('D:\CV\Models_and_scalers\\training_history_NODATA.json', 'w') as f:
+    model.save('C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\Models_and_scalers\deepfake_cnn_model_10k.keras')
+    with open('C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\Models_and_scalers\\training_history_10k.json', 'w') as f:
         json.dump(history.history, f)
 
     print('Model saved')

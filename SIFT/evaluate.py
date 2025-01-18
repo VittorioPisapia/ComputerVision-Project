@@ -6,9 +6,9 @@ import matplotlib.pyplot as plt # type: ignore
 def evaluate_model_with_sift():
     print("Loading the model...")
 
-    with open('D:\CV\Models_and_scalers\sift_svm_model.pkl', 'rb') as f:
+    with open('C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\Models_and_scalers\sift_svm_model.pkl', 'rb') as f:
         svm = pickle.load(f)
-    with open('D:\CV\Models_and_scalers\scaler_SIFT.pkl', 'rb') as f:
+    with open('C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\Models_and_scalers\scaler_SIFT.pkl', 'rb') as f:
         scaler = pickle.load(f)
 
     X_test, _, y_test, _ = preprocess_data_with_sift('C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\dataset\\0', 'C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\dataset\\1')
