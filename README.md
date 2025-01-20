@@ -34,6 +34,7 @@ To assess human ability in detecting deepfakes, 24 participants were tested with
 - **Limitations**: Less effective in detecting subtle texture details.
 
 ### SIFT (Scale-Invariant Feature Transform)
+Two implementation: Dense SIFT and Mean SIFT
 - **Strengths**: Focuses on local keypoints, robust under scaling and rotation, ideal for anomaly detection in specific regions.  
 - **Limitations**: High computational cost and large feature vectors.
 
