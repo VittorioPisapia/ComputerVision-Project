@@ -65,8 +65,6 @@ The dataset for this project includes both real and fake images:
 | CNN (10 epochs)   | 456.57                  | 0.70     | 0.70     |
 | CNN (5 epochs)    | 232.03                  | 0.67     | 0.66     |
 
-Risultato
-Feature Extractor	Training Time (seconds)	Accuracy	F1-Score
 
 
 
