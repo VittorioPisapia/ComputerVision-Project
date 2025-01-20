@@ -72,8 +72,9 @@ The dataset for this project includes both real and fake images:
 | LBP               | 86.17                   | 0.64     | 0.64     |
 | HOG               | 67.97                   | 0.74     | 0.74     |
 | LBP + HOG         | 1908.29                 | 0.82     | 0.82     |
-| SIFT              | 47.84                   | 0.62     | 0.62     |
-| SIFT + HOG        | 2125.73                 | 0.81     | 0.81     |
+| Mean SIFT         | 47.84                   | 0.62     | 0.62     |
+| Dense SIFT        | xxxxxx                  | xxxx     | xxxxx    |
+| Mean SIFT + HOG   | 2125.73                 | 0.81     | 0.81     |
 | CNN (20 epochs)   | 919.38                  | 0.69     | 0.69     |
 | CNN (10 epochs)   | 456.57                  | 0.70     | 0.70     |
 | CNN (5 epochs)    | 232.03                  | 0.67     | 0.66     |
@@ -122,7 +123,7 @@ Adversarial robustness was evaluated using two attacks from the Adversarial Robu
 
 ---
 
-#### SIFT
+#### Mean SIFT
 | Attack           | Mean of Original L2 Norms | Mean of L2 Norm Differences | % w.r.t. Original Norms | Successful Attacks (%) |
 |-------------------|---------------------------|-----------------------------|--------------------------|-------------------------|
 | FGM (ε = 0.01)   | 11.0991                   | 0.1131                      | 1.019                   | 16                      |
@@ -135,7 +136,19 @@ Adversarial robustness was evaluated using two attacks from the Adversarial Robu
 
 ---
 
-#### SIFT + HOG
+#### Dense SIFT
+| Attack           | Mean of Original L2 Norms | Mean of L2 Norm Differences | % w.r.t. Original Norms | Successful Attacks (%) |
+|-------------------|---------------------------|-----------------------------|--------------------------|-------------------------|
+| FGM (ε = 0.01)   | xxxxxxx                   | xxxxxx                      | xxxxx                   | xx                      |
+| FGM (ε = 0.03)   | xxxxxxxx                  | xxxxxx                      | xxxxx                   | xx                      |
+| FGM (ε = 0.08)   | xxxxxxx                   | xxxxxx                      | xxxxxx                  | xx                      |
+| CL2 (c = 0.05)   | xxxxxxx                   | xxxxxx                      | xxxxxx                  | xx                      |
+| CL2 (c = 0.08)   | xxxxxxx                   | xxxxxx                      | xxxxxx                  | xx                      |
+| CL2 (c = 0.1)    | xxxxxxx                   | xxxxxx                      | xxxxxx                  | xx                      |
+
+---
+
+#### Mean SIFT + HOG
 | Attack           | Mean of Original L2 Norms | Mean of L2 Norm Differences | % w.r.t. Original Norms | Successful Attacks (%) |
 |-------------------|---------------------------|-----------------------------|--------------------------|-------------------------|
 | FGM (ε = 0.01)   | 162.7266                  | 1.6239                      | 0.9979                  | 20                      |
@@ -163,7 +176,7 @@ Adversarial robustness was evaluated using two attacks from the Adversarial Robu
 
 - **Balanced Performer**: Among traditional methods, HOG stood out for its balance between performance and efficiency:
   - **Training Time**: Required only ~68 seconds, 78.8% of LBP’s training time.
-  - **Accuracy**: Outperformed human participants, higher than LBP, CNN and SIFT.
+  - **Accuracy**: Outperformed human participants, higher than LBP, CNN and Mean SIFT.
   - **Adversarial Robustness**: Comparable to the LBP + HOG model against simpler attacks, with strong resilience against more advanced attacks (success rates below 45% for tested confidence levels).
 
 - **Potential of CNNs**: While CNN models are known to achieve superior accuracy with sufficient resources and larger datasets, their performance in this study was limited by computational constraints:
