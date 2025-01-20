@@ -5,7 +5,7 @@ from data_processing import preprocess_data_cnn
 import json
 
 def evaluate_model():
-    model = tf.keras.models.load_model('C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\Models_and_scalers\deepfake_cnn_model_NODATA.keras')
+    model = tf.keras.models.load_model('C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\Models_and_scalers\deepfake_cnn_model_10k.keras')
 
     X_test, _, y_test, _ = preprocess_data_cnn('C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\dataset\\0', 'C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\dataset\\1')
 
@@ -14,7 +14,7 @@ def evaluate_model():
 
     y_pred = (model.predict(X_test) > 0.5).astype("int32")
 
-    with open('C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\Models_and_scalers\\training_history_NODATA.json', 'r') as f:
+    with open('C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\Models_and_scalers\\training_history_10k.json', 'r') as f:
         loaded_history = json.load(f)
     
     print(classification_report(y_test, y_pred, target_names=["Real", "Fake"]))

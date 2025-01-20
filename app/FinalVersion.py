@@ -7,9 +7,9 @@ import time
 from playsound import playsound # type: ignore
 
 limit= 10
-img_size=700
+img_size=1000
 name = False
-dataset_path = 'dataset'
+dataset_path = 'dataset1k'
 
 class ImageClassificationApp:
     def __init__(self, root, image_folder_path):

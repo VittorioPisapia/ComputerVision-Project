@@ -15,7 +15,7 @@ with open('C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\Models
     scaler = pickle.load(f)
 
 classifier = SklearnClassifier(model=svm)
-_, X_test, _, y_test = preprocess_data_with_hog('C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\dataset\\0', 'C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\dataset\\1')
+_, X_test, _, y_test = preprocess_data_with_hog('C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\dataset1k\\0', 'C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\dataset1k\\1')
 
 batch_size = 100
 X_batch = X_test[:batch_size]
@@ -24,9 +24,9 @@ y_batch = y_test[:batch_size]
 X_batch_scaled = scaler.transform(X_batch)
 
 # Choose attack Method 
-#attack = FastGradientMethod(estimator=classifier, eps=0.01)
+#attack = FastGradientMethod(estimator=classifier, eps=0.08)
 #attack = ProjectedGradientDescent(estimator=classifier, eps=0.03, max_iter=20)
-attack = CarliniL2Method(classifier=classifier, confidence=0.1, max_iter=20)
+attack = CarliniL2Method(classifier=classifier, confidence=0.05, max_iter=20)
 
 print(f"Generating adversarial features for a batch of {batch_size} samples...")
 adversarial_features_scaled = attack.generate(x=X_batch_scaled)
