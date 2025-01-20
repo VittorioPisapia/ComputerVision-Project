@@ -84,9 +84,6 @@ Adversarial robustness was evaluated using two attacks from the Adversarial Robu
 | CL2 (c = 0.08)   | 4.7768                    | 0.5491                      | 11.49                   | 95                      |
 | CL2 (c = 0.1)    | 4.7768                    | 0.5695                      | 11.92                   | 95                      |
 
-**Summary**:
-- **FGM**: LBP shows moderate robustness, with only 49% of successful attacks at the highest ε (0.08).
-- **CL2**: LBP is highly vulnerable, with a 95% success rate even at the lowest confidence (c = 0.05).
 
 ---
 
@@ -100,9 +97,6 @@ Adversarial robustness was evaluated using two attacks from the Adversarial Robu
 | CL2 (c = 0.08)   | 89.7785                   | 0.3963                      | 0.4414                  | 40                      |
 | CL2 (c = 0.1)    | 89.7785                   | 0.3464                      | 0.3858                  | 36                      |
 
-**Summary**:
-- **FGM**: HOG is highly vulnerable to FGM, with success rates reaching 100% at ε = 0.08.
-- **CL2**: HOG shows better robustness, with success rates ranging from 36% to 41%.
 
 ---
 
@@ -112,8 +106,4 @@ Adversarial robustness was evaluated using two attacks from the Adversarial Robu
 | FGM (ε = 0.01)   | 162.3967                  | 1.6208                      | 0.998                   | 24                      |
 | FGM (ε = 0.03)   | 162.3967                  | 4.8624                      | 2.9941                  | 77                      |
 | FGM (ε = 0.08)   | 162.3967                  | 12.9664                     | 7.9843                  | 99                      |
-
-**Summary**:
-- **FGM**: Performs similarly to HOG, with 99% of attacks succeeding at ε = 0.08.
-- **CL2**: Evaluation not feasible due to computational limitations.
 
