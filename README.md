@@ -139,3 +139,23 @@ Adversarial robustness was evaluated using two attacks from the Adversarial Robu
 | FGM (ε = 0.03)   | 0.74                       | 0.54                            | 58               |
 | FGM (ε = 0.08)   | 0.71                       | 0.54                            | 58               |
 
+--- 
+
+## Conclusion
+
+### Key Takeaways
+- **Top Performance**: The best accuracy and F1-score were achieved by combining traditional features (LBP + HOG). However, this came at a cost:
+  - Training time increased dramatically (~2000% of LBP’s training time).
+  - The model was highly vulnerable to adversarial attacks, failing 99% of the time under an FGM attack (ϵ = 0.08), despite L2 norm differences staying below 10%.
+
+- **Balanced Performer**: Among traditional methods, HOG stood out for its balance between performance and efficiency:
+  - **Training Time**: Required only ~68 seconds, 78.8% of LBP’s training time.
+  - **Accuracy**: Outperformed human participants.
+  - **Adversarial Robustness**: Comparable to the LBP + HOG model against simpler attacks, with strong resilience against more advanced attacks (success rates below 45% for tested confidence levels).
+
+- **Potential of CNNs**: While CNN models are known to achieve superior accuracy with sufficient resources and larger datasets, their performance in this study was limited by computational constraints:
+  - **Robustness**: CNNs demonstrated better resistance to FGM attacks, maintaining strong performance even at higher ϵ values.
+  - **Trade-off**: Despite their robustness, CNNs underperformed in accuracy compared to concatenated traditional features.
+
+### Final Thoughts
+The results highlight a trade-off between computational efficiency, accuracy, and adversarial robustness. Traditional feature-based methods (like HOG) offer a practical solution for scenarios with limited computational resources, while CNNs present a more robust, albeit resource-intensive, alternative for adversarial scenarios.
