@@ -50,4 +50,16 @@ A deep neural network is designed to perform feature extraction and classificati
     <img src="https://github.com/VittorioPisapia/ComputerVision-Project/blob/main/images/CNN_model_architecture.png" alt="Example Image" style="width:660px;"/>
 </p>
 
+## Dataset
+The dataset for this project includes both real and fake images:
+- Real images: Samples were sourced from Flickr-Faces-HQ (FFHQ), provided by Nvidia.
+- Fake images: Faces were sampled by the “1 Million Face Faces” dataset, created with StyleGan and provided by Bojan Tunguz.
+
+## Evaluation Metrics 
+- **Accuracy**: Evaluated using the F1-score to measure the balance between precision and recall in the classification.
+- **Computational Efficiency**: Feature extraction times and training times will be compared for each method to assess computational performance.
+- **Robustness to Adversarial Attacks**: Test on adversarial examples generated with Fast Gradient Method (FGM) and Carlini and Wagner L2 Method (CL2).
+
+
+
 
