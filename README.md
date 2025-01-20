@@ -33,13 +33,13 @@ To assess human ability in detecting deepfakes, 24 participants were tested with
 - **Limitations**: Requires extensive data and computational resources. Works as a "black box," challenging to interpret.
 #### Model Architecture
 <p align="center">
-    <img src="https://github.com/VittorioPisapia/ComputerVision-Project/blob/main/images/CNN_model_architecture.png" alt="Example Image" style="width:660px;"/>
+    <img src="https://github.com/VittorioPisapia/ComputerVision-Project/blob/main/images/CNN_model_architecture.png" alt="Example Image" style="width:500px;"/>
 </p>
 
 ## Classification
 Once the features have been acquired, classification will be performed by SVM model trained for each specific feature extractor (or combination of feature extractor).
 <p align="center">
-    <img src="https://github.com/VittorioPisapia/ComputerVision-Project/blob/main/images/classification.png" alt="Example Image" style="width:660px;"/>
+    <img src="https://github.com/VittorioPisapia/ComputerVision-Project/blob/main/images/classification.png" alt="Example Image" style="width:500px;"/>
 </p>
 
 ## Dataset
