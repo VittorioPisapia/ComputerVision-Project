@@ -167,9 +167,9 @@ Adversarial robustness was evaluated using two attacks from the Adversarial Robu
 ## Conclusion
 
 ### Key Takeaways
-- **Top Performance**: The best accuracy and F1-score were achieved by combining traditional features (LBP + HOG). However, this came at a cost:
+- **Top Performance**: The best accuracy and F1-score were achieved by combining traditional features (LBP + HOG) and Dense SIFT. However, this came at a cost:
   - Training time increased dramatically (~2000% of LBP’s training time).
-  - The model was highly vulnerable to adversarial attacks, failing 99% of the time under an FGM attack (ϵ = 0.08), despite L2 norm differences staying below 10%.
+  - The models were highly vulnerable to adversarial attacks, failing 99% of the time under an FGM attack (ϵ = 0.08), despite L2 norm differences staying below 10%.
 
 - **Balanced Performer**: Among traditional methods, HOG stood out for its balance between performance and efficiency:
   - **Training Time**: Required only ~68 seconds, 78.8% of LBP’s training time.
