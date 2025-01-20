@@ -1,5 +1,14 @@
 # Comparative Analysis of Feature Extraction Techniques for Robust Deepfake Image Detection
-## Table of contents
+## Table of Contents
+- [Introduction to the Problem](#introduction-to-the-problem)
+- [Human Performance](#human-performance)
+- [Feature Extractor](#feature-extractor)
+- [Classification](#classification)
+- [Dataset](#dataset)
+- [Evaluation Metrics](#evaluation-metrics)
+- [Feature Extractor Performance](#feature-extractor-performance)
+- [Adversarial Robustness](#adversarial-robustness)
+- [Conclusion](#conclusion)
 ## Introduction to the Problem
 Detecting deepfake images is a pressing challenge in computer vision, given the ease of generating hyper-realistic synthetic media with AI. This project explores and compares different feature extraction techniques to tackle this issue. By analyzing methods like Local Binary Patterns (LBP), Histogram of Oriented Gradients (HOG), and an end-to-end neural network, the goal is to identify their strengths and weaknesses in distinguishing authentic from fake images.
 <p align="center">
