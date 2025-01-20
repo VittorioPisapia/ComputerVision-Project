@@ -34,9 +34,12 @@ To assess human ability in detecting deepfakes, 24 participants were tested with
 - **Limitations**: Less effective in detecting subtle texture details.
 
 ### SIFT (Scale-Invariant Feature Transform)
-Two implementation: Dense SIFT and Mean SIFT
-- **Strengths**: Focuses on local keypoints, robust under scaling and rotation, ideal for anomaly detection in specific regions.  
-- **Limitations**: High computational cost and large feature vectors.
+This project explores two SIFT implementations:
+1. **Dense SIFT**: Focuses on predetermined points arranged on a grid, providing a uniform analysis of the image.
+2. **Mean SIFT Descriptors**: Aggregates the mean of all SIFT descriptors found in a given image, offering a compact representation.
+
+- **Strengths**: Robust to scaling and rotation, excels at detecting local anomalies, 128 component vector (Mean SIFT Descriptors).  
+- **Limitations**: Computationally expensive, with high-dimensional feature vectors (Dense SIFT).
 
 ### CNN (Convolutional Neural Networks)
 - **Strengths**: End-to-end learning directly from raw images, extracting hierarchical features (textures, patterns, anomalies). Combines feature extraction and classification.  
