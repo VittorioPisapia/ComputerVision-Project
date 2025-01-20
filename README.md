@@ -73,7 +73,7 @@ The dataset for this project includes both real and fake images:
 | HOG               | 67.97                   | 0.74     | 0.74     |
 | LBP + HOG         | 1908.29                 | 0.82     | 0.82     |
 | Mean SIFT         | 47.84                   | 0.62     | 0.62     |
-| Dense SIFT        | xxxxxx                  | xxxx     | xxxxx    |
+| Dense SIFT        | 1848.0                  | 0.82     | 0.82     |
 | Mean SIFT + HOG   | 2125.73                 | 0.81     | 0.81     |
 | CNN (20 epochs)   | 919.38                  | 0.69     | 0.69     |
 | CNN (10 epochs)   | 456.57                  | 0.70     | 0.70     |
