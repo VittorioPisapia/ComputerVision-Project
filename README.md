@@ -157,5 +157,3 @@ Adversarial robustness was evaluated using two attacks from the Adversarial Robu
   - **Robustness**: CNNs demonstrated better resistance to FGM attacks, maintaining strong performance even at higher ϵ values.
   - **Trade-off**: Despite their robustness, CNNs underperformed in accuracy compared to concatenated traditional features.
 
-### Final Thoughts
-The results highlight a trade-off between computational efficiency, accuracy, and adversarial robustness. Traditional feature-based methods (like HOG) offer a practical solution for scenarios with limited computational resources, while CNNs present a more robust, albeit resource-intensive, alternative for adversarial scenarios.
