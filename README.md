@@ -52,6 +52,21 @@ The dataset for this project includes both real and fake images:
 - **Computational Efficiency**: Feature extraction times and training times will be compared for each method to assess computational performance.
 - **Robustness to Adversarial Attacks**: Test on adversarial examples generated with Fast Gradient Method (FGM) and Carlini and Wagner L2 Method (CL2).
 
+## Feature Extractor Performance
+
+| Feature Extractor | Training Time (seconds) | Accuracy | F1-Score |
+|--------------------|--------------------------|----------|----------|
+| LBP               | 86.17                   | 0.64     | 0.64     |
+| HOG               | 67.97                   | 0.74     | 0.74     |
+| LBP + HOG         | 1908.29                 | 0.82     | 0.82     |
+| SIFT              | 47.84                   | 0.62     | 0.62     |
+| SIFT + HOG        | 2125.73                 | 0.81     | 0.81     |
+| CNN (20 epochs)   | 919.38                  | 0.69     | 0.69     |
+| CNN (10 epochs)   | 456.57                  | 0.70     | 0.70     |
+| CNN (5 epochs)    | 232.03                  | 0.67     | 0.66     |
+
+Risultato
+Feature Extractor	Training Time (seconds)	Accuracy	F1-Score
 
 
 
