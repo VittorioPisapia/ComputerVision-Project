@@ -31,6 +31,12 @@ Out of 132 total runs, the mean accuracy was 6.59 correct answers per test, whil
     <img src="https://github.com/VittorioPisapia/ComputerVision-Project/blob/main/images/CNN_model_architecture.png" alt="Example Image" style="width:660px;"/>
 </p>
 
+## Classification
+Once the features have been acquired, classification will be performed by SVM model trained for each specific feature extractor (or combination of feature extractor).
+<p align="center">
+    <img src="https://github.com/VittorioPisapia/ComputerVision-Project/blob/main/images/classification.png" alt="Example Image" style="width:660px;"/>
+</p>
+
 ## Dataset
 The dataset for this project includes both real and fake images:
 - Real images: Samples were sourced from Flickr-Faces-HQ (FFHQ), provided by Nvidia.
