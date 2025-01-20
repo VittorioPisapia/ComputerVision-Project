@@ -10,3 +10,13 @@ Out of 132 total runs, the mean accuracy was 6.59 correct answers per test, whil
     <img src="https://github.com/VittorioPisapia/ComputerVision-Project/blob/main/images/app1.png" alt="Example Image" style="width:660px;"/>
 </p>
 
+## Feature extractor
+### LBP
+LBP is a texture descriptor that captures local features by encoding the relationship between a pixel and its neighboring pixels.
+#### Advantages
+- Captures fine-grained Textures: LBP could be effective in detecting irregular patterns or inconsistencies in skin texture due to its focus in local texture.
+- Computational Efficiency: LBP is computationally lightweight, making it well-suited for analyzing large datasets.
+- Baseline for Comparison: due to its low computational cost, it will be used as a baseline for comparison.
+#### Limitations
+- Struggles with high-level features, such as global structures, limiting its ability to capture complex anomalies.
+
