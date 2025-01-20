@@ -139,12 +139,9 @@ Adversarial robustness was evaluated using two attacks from the Adversarial Robu
 #### Dense SIFT
 | Attack           | Mean of Original L2 Norms | Mean of L2 Norm Differences | % w.r.t. Original Norms | Successful Attacks (%) |
 |-------------------|---------------------------|-----------------------------|--------------------------|-------------------------|
-| FGM (ε = 0.01)   | xxxxxxx                   | xxxxxx                      | xxxxx                   | xx                      |
-| FGM (ε = 0.03)   | xxxxxxxx                  | xxxxxx                      | xxxxx                   | xx                      |
-| FGM (ε = 0.08)   | xxxxxxx                   | xxxxxx                      | xxxxxx                  | xx                      |
-| CL2 (c = 0.05)   | xxxxxxx                   | xxxxxx                      | xxxxxx                  | xx                      |
-| CL2 (c = 0.08)   | xxxxxxx                   | xxxxxx                      | xxxxxx                  | xx                      |
-| CL2 (c = 0.1)    | xxxxxxx                   | xxxxxx                      | xxxxxx                  | xx                      |
+| FGM (ε = 0.01)   | 313,5703                   | 3,1397                      | 1.0000                   | 30                      |
+| FGM (ε = 0.03)   | 313,5703                   | 9,4192                      | 3.0000                   | 81                      |
+| FGM (ε = 0.08)   | 313,5703                   | 25,1178                     | 8.0100                   | 99                      |
 
 ---
 
