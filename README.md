@@ -150,7 +150,7 @@ Adversarial robustness was evaluated using two attacks from the Adversarial Robu
 
 - **Balanced Performer**: Among traditional methods, HOG stood out for its balance between performance and efficiency:
   - **Training Time**: Required only ~68 seconds, 78.8% of LBP’s training time.
-  - **Accuracy**: Outperformed human participants.
+  - **Accuracy**: Outperformed human participants, higher than LBP, CNN and SIFT.
   - **Adversarial Robustness**: Comparable to the LBP + HOG model against simpler attacks, with strong resilience against more advanced attacks (success rates below 45% for tested confidence levels).
 
 - **Potential of CNNs**: While CNN models are known to achieve superior accuracy with sufficient resources and larger datasets, their performance in this study was limited by computational constraints:
