@@ -65,6 +65,55 @@ The dataset for this project includes both real and fake images:
 | CNN (10 epochs)   | 456.57                  | 0.70     | 0.70     |
 | CNN (5 epochs)    | 232.03                  | 0.67     | 0.66     |
 
+## Adversarial Robustness
+Adversarial robustness was evaluated using two attacks from the Adversarial Robustness Toolbox (ART):
 
+### Attack Methods
+- **Fast Gradient Method (FGM)**: An extension of the Fast Gradient Sign Method. FGM computes the gradient of the loss function with respect to the input features and generates adversarial examples by perturbing the input in the direction that maximizes the loss. It is computationally efficient and straightforward.
+- **Carlini and Wagner L2 Attack (CL2)**: A state-of-the-art iterative method that formulates adversarial example generation as an optimization problem. It seeks the minimal perturbation required to misclassify the model, making it more precise and effective compared to FGM.
 
+---
+
+#### LBP
+| Attack           | Mean of Original L2 Norms | Mean of L2 Norm Differences | % w.r.t. Original Norms | Successful Attacks (%) |
+|-------------------|---------------------------|-----------------------------|--------------------------|-------------------------|
+| FGM (ε = 0.01)   | 4.7768                    | 0.051                       | 1.067                   | 5                       |
+| FGM (ε = 0.03)   | 4.7768                    | 0.153                       | 3.2                     | 15                      |
+| FGM (ε = 0.08)   | 4.7768                    | 0.4079                      | 8.53                    | 49                      |
+| CL2 (c = 0.05)   | 4.7768                    | 0.5024                      | 10.51                   | 95                      |
+| CL2 (c = 0.08)   | 4.7768                    | 0.5491                      | 11.49                   | 95                      |
+| CL2 (c = 0.1)    | 4.7768                    | 0.5695                      | 11.92                   | 95                      |
+
+**Summary**:
+- **FGM**: LBP shows moderate robustness, with only 49% of successful attacks at the highest ε (0.08).
+- **CL2**: LBP is highly vulnerable, with a 95% success rate even at the lowest confidence (c = 0.05).
+
+---
+
+#### HOG
+| Attack           | Mean of Original L2 Norms | Mean of L2 Norm Differences | % w.r.t. Original Norms | Successful Attacks (%) |
+|-------------------|---------------------------|-----------------------------|--------------------------|-------------------------|
+| FGM (ε = 0.01)   | 89.7785                   | 0.9                         | 1.002                   | 22                      |
+| FGM (ε = 0.03)   | 89.7785                   | 2.7                         | 3.007                   | 73                      |
+| FGM (ε = 0.08)   | 89.7785                   | 7.2                         | 8.019                   | 100                     |
+| CL2 (c = 0.05)   | 89.7785                   | 0.3745                      | 0.4171                  | 41                      |
+| CL2 (c = 0.08)   | 89.7785                   | 0.3963                      | 0.4414                  | 40                      |
+| CL2 (c = 0.1)    | 89.7785                   | 0.3464                      | 0.3858                  | 36                      |
+
+**Summary**:
+- **FGM**: HOG is highly vulnerable to FGM, with success rates reaching 100% at ε = 0.08.
+- **CL2**: HOG shows better robustness, with success rates ranging from 36% to 41%.
+
+---
+
+#### LBP + HOG
+| Attack           | Mean of Original L2 Norms | Mean of L2 Norm Differences | % w.r.t. Original Norms | Successful Attacks (%) |
+|-------------------|---------------------------|-----------------------------|--------------------------|-------------------------|
+| FGM (ε = 0.01)   | 162.3967                  | 1.6208                      | 0.998                   | 24                      |
+| FGM (ε = 0.03)   | 162.3967                  | 4.8624                      | 2.9941                  | 77                      |
+| FGM (ε = 0.08)   | 162.3967                  | 12.9664                     | 7.9843                  | 99                      |
+
+**Summary**:
+- **FGM**: Performs similarly to HOG, with 99% of attacks succeeding at ε = 0.08.
+- **CL2**: Evaluation not feasible due to computational limitations.
 
