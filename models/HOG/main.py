@@ -5,7 +5,7 @@ import time
 def main():
     # Training of the model
     start_time = time.time()
-    #train.train_model()
+    train.train_model()
 
     end_time = time.time()
 

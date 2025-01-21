@@ -11,10 +11,11 @@ def evaluate_model_with_lbp_hog():
     with open('C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\Models_and_scalers\scaler_LBP_HOG.pkl', 'rb') as f:
         scaler = pickle.load(f)
 
-    X_test, _, y_test, _ = preprocess_data_with_lbp_hog('C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\dataset\\0', 'C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\dataset\\1')
+    X_test, _, y_test, _ = preprocess_data_with_lbp_hog('C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\datasets\\dataset1k\\0', 'C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\datasets\\dataset1k\\1')
 
     X_test = scaler.transform(X_test)
-
+    print(X_test.shape)
+    
     print("Evaluating the SVM...")
     y_pred = svm.predict(X_test)
 

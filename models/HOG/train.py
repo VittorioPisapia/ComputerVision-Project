@@ -7,7 +7,7 @@ from sklearn.preprocessing import StandardScaler # type: ignore
 def train_model():
     print("Starting training with HOG + SVM...")
 
-    X_train, X_test, y_train, y_test = preprocess_data_with_hog('C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\new_dataset\\Training_1500\\0', 'C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\new_dataset\\Training_1500\\1')
+    X_train, X_test, y_train, y_test = preprocess_data_with_hog('C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\datasets\\dataset1.5k\\Training_1500\\0', 'C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\datasets\\dataset1.5k\\Training_1500\\1')
 
 
     scaler = StandardScaler()

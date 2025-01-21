@@ -11,10 +11,10 @@ def evaluate_model():
         scaler = pickle.load(f)    
 
 
-    X_test, _, y_test, _ = preprocess_data_with_hog('C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\dataset\\0', 'C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\dataset\\1')
+    X_test, _, y_test, _ = preprocess_data_with_hog('C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\datasets\\dataset1k\\0', 'C:\\Users\\Tommaso\\Documents\\GitHub\\ComputerVision-Project\\datasets\\dataset1k\\1')
 
     X_test = scaler.transform(X_test)
-
+    print(X_test.shape)
 
     print("Evaluating the SVM...")
     y_pred = svm.predict(X_test)
